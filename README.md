@@ -157,21 +157,18 @@ The system uses a **Multi-Layer Perceptron (MLP)** architecture optimized for ta
 ### Features (15 total)
 
 1. **Temporal**: Date received (days since reference)
-2. **Project**: Size (square feet), duplicate flag
-3. **Customer VIP Flags** (6 features):
-   - Blacklisted
-   - Hotel VIP
-   - Large Project VIP
-   - Key Customer VIP
-   - Historical VIP
-   - Historical VIP Rating
-4. **Market Segments** (6 features):
-   - Education
-   - Entertainment/Transit
-   - Hospitality/Retail/Dialysis
-   - Healthcare
-   - Spaces
-   - Unknown
+2. **Project**: Size, duplicate flag
+3. **Premium/Priority Flags** (6 features):
+   - Excluded (blocked/restricted items)
+   - Premium Tier 1-4 (customer priority levels)
+   - Premium Score (numeric rating)
+4. **Category Segments** (6 features):
+   - Segment Type A
+   - Segment Type B
+   - Segment Type C
+   - Segment Type D
+   - Segment Type E
+   - Segment Unknown
 
 ### Division-Specific Models
 
@@ -257,11 +254,12 @@ url = "https://your-endpoint.azurewebsites.net/score"
 headers = {"Content-Type": "application/json"}
 
 data = {
-    "datereceived": 1825,
-    "isduplicate": 0,
-    "projectSizeSquareFeet": 5000,
-    "Blacklisted": 0,
-    "HotelVip": 1,
+    "timestamp_days": 1825,
+    "is_duplicate": 0,
+    "project_size": 5000,
+    "Excluded": 0,
+    "Premium_Tier_1": 1,
+    "Premium_Tier_2": 0,
     # ... other features
 }
 
