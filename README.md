@@ -1,4 +1,4 @@
-# Azure ML Opportunity Prediction
+# ML Opportunity Prediction System
 
 ## Project Overview
 
