@@ -1,0 +1,15 @@
+{
+  "model_type": "MLP",
+  "hidden_size": 384,
+  "num_layers": 1,
+  "dropout": 0.10191718370539062,
+  "learning_rate": 0.0007203821205189775,
+  "batch_size": 64,
+  "optimizer": "Adam",
+  "weight_decay": 0.0008676003739539543,
+  "epochs": 50,
+  "early_stopping_patience": 5,
+  "random_state": 42,
+  "test_size": 0.2,
+  "config_id": "production_mlp_model"
+}
